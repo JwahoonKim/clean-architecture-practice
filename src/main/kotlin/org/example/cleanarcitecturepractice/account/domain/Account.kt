@@ -69,5 +69,5 @@ class Account private constructor(
     }
 
     @JvmInline
-    value class AccountId(val value: String?)
+    value class AccountId(val value: Long?)
 }
