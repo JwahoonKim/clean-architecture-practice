@@ -4,9 +4,9 @@ import java.time.LocalDateTime
 
 
 class Account private constructor(
-    private val id: AccountId,
-    private val baselineBalance: Money,
-    private val activityWindow: ActivityWindow,
+    val id: AccountId,
+    val baselineBalance: Money,
+    val activityWindow: ActivityWindow,
 ) {
 
     fun calculateBalance(): Money {

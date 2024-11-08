@@ -26,7 +26,7 @@ value class Money(val amount: BigInteger) {
     companion object {
         var ZERO: Money = of(0L)
 
-        private fun of(value: Long): Money = Money(BigInteger.valueOf(value))
+        fun of(value: Long): Money = Money(BigInteger.valueOf(value))
 
         fun add(a: Money, b: Money): Money = Money(a.amount.add(b.amount))
 
