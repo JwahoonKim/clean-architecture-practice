@@ -5,7 +5,7 @@ import org.example.cleanarcitecturepractice.account.domain.Account.AccountId
 
 
 class ActivityWindow(
-    private val activities: List<Activity>
+    val activities: List<Activity>
 ) {
 
     fun getStartTimeStamp(): LocalDateTime {

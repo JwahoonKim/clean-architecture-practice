@@ -14,7 +14,7 @@ class Activity(
     val id: ActivityId = ActivityId.create()
 
     @JvmInline
-    value class ActivityId(val value: String?) {
+    value class ActivityId(val value: Long?) {
         companion object{
             fun create(): ActivityId {
                 return ActivityId(null)
