@@ -16,7 +16,7 @@ class AccountEntity(
 ) {
     fun toDomain(activityEntities: List<ActivityEntity>, withdrawBalance: Long, depositBalance: Long): Account {
         val baselineBalance = Money.of(withdrawBalance - depositBalance)
-        val activities = activityEntities.map { it.toDomain() }
+        val activities = activityEntities.map { it.toDomain() }.toMutableList()
 
         return Account.withId(
             id = Account.AccountId(id!!),

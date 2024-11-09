@@ -5,7 +5,7 @@ import org.example.cleanarcitecturepractice.account.domain.Account.AccountId
 
 
 class ActivityWindow(
-    val activities: List<Activity>
+    val activities: MutableList<Activity>
 ) {
 
     fun getStartTimeStamp(): LocalDateTime {
@@ -26,8 +26,8 @@ class ActivityWindow(
         return Money(depositBalance - withdrawBalance)
     }
 
-    fun addActivity(activity: Activity): ActivityWindow {
-        return ActivityWindow(activities + activity)
+    fun addActivity(activity: Activity) {
+        activities.add(activity)
     }
 }
 
